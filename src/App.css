@@ -1,13 +1,39 @@
 .App{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   height: 100vh;
-  text-align: center;
+  background-color: var(--background-main);
 }
 
+.container{
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 2fr 0.3fr;
+  grid-template-areas: 
+    "side search search search"
+    "side main main main"
+    "footer footer footer footer"
+  ;
+  min-width: 100vw;
+  height: 100vh;
+  padding: 0;
+}
 
-h2{
-  color: var(--dark-red-secondary);
-  font-weight: bold;
+.search{
+  grid-area: search;
+  background-color: var(--background-main);
+}
+
+.sidebar{
+  grid-area: side;
+  background-color: var(--dark-red-secondary);
+}
+
+main{
+  grid-area: main;
+  background-color: var(--background-main);
+}
+
+footer{
+  grid-area: footer;
+  background-color: var(--red-secondary);
 }
