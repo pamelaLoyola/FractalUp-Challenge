@@ -1,0 +1,63 @@
+.result--card-song{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 200px;
+	width: 100%;
+	transition: 0.3s;
+}
+
+.result--card-song:hover{
+	box-shadow: 8px 4px 8px rgba(89, 73, 30, 0.16);
+	transform: translateY(-5px);
+}
+
+.result--photo{
+	position: relative;
+	height: 80%;
+	width: 100%;
+	background-image: url("https://lifeinua.info/wp-content/uploads/2016/03/Adele-2015-Alasdair-McLellan-billboard-650.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.result--photo i{
+	color: var(--just-white);
+	cursor: pointer;
+}
+
+.result--photo i:first-child{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 30px;
+	transition: 0.2s;
+}
+
+.result--photo i:first-child:hover{
+	padding: 15px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.result--photo i:nth-child(2){
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.result-info{
+	margin-top: 10px;
+}
+
+.result-info p{
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: var(--gray-secondary);
+}
+
+.result-info p span{
+	font-weight: 400;
+}

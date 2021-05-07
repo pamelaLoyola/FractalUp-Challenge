@@ -1,19 +1,12 @@
 import React, { Component } from 'react'
 import '../css/Player.css'
+import SongInfo from './SongInfo'
 
 export class Player extends Component {
     render() {
         return (
             <div className="player">
-                <div className="song-info">
-                    <div className="photo">
-                        <img src="https://static01.nyt.com/images/2015/11/15/arts/15ADELE/15ADELE-articleLarge-v2.jpg?quality=75&auto=webp&disable=upscale" alt="Adele" />
-                    </div>
-                    <div className="info--detail">
-                        <p>Canción</p>
-                        <p>Artista - Álbum</p>
-                    </div>
-                </div>
+                <SongInfo></SongInfo>
                 <div className="song--controllers">
                     <i className="fas fa-step-backward"></i>
                     <i className="fas fa-play"></i>

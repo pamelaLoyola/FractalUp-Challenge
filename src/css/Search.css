@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 20px 40px;
 }
 
 .searchBox{
@@ -20,6 +20,10 @@
     border: 1px solid var(--soft-gray);
     border-radius: 100px;
     outline: none;
+}
+
+.searchBox input:focus{
+    border: 1px solid var(--red-principal);
 }
 
 .searchBox i{
@@ -45,5 +49,9 @@
 
 .userBox i {
     color: var(--red-principal);
+}
+
+.userBox i:hover{
+    cursor: pointer;
 }
 

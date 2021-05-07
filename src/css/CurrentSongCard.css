@@ -1,0 +1,112 @@
+.current-song {
+	position: relative;
+	display: grid;
+	grid-template-columns: 0.3fr 0.7fr;
+	/* grid-template-rows: 1fr; */
+	height: 250px;
+	overflow: hidden;
+}
+
+.song--photo {
+	position: relative;
+	background-image: url("https://lifeinua.info/wp-content/uploads/2016/03/Adele-2015-Alasdair-McLellan-billboard-650.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.song--photo > i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	font-size: 50px;
+	color: var(--just-white);
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.song--photo > i:hover {
+	padding: 15px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* .song--photo img {
+	height: 50%;
+	width: 50%;
+	object-fit: cover;
+	object-position: center;
+} */
+
+.song--info {
+	display: flex;
+	flex-direction: column;
+	padding: 30px 30px 30px 30px;
+	background-color: var(--light-red);
+	background: linear-gradient(
+			10deg,
+			rgba(216, 75, 75, 0.7),
+			rgba(167, 0, 0, 0.7)
+		),
+		url("https://lifeinua.info/wp-content/uploads/2016/03/Adele-2015-Alasdair-McLellan-billboard-650.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	/* opacity: 0.5; */
+	/* mix-blend-mode: normal; */
+}
+
+.song--info p {
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	color: var(--just-white);
+}
+
+.song--info p:first-child {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1rem;
+}
+
+.song--info p:nth-child(3) {
+	margin-top: 15px;
+	line-height: 2rem;
+}
+
+.song--info p > span {
+	margin-left: 10px;
+	font-weight: bold;
+	color: var(--dark-red-secondary);
+}
+
+.song--actions {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	margin-top: 40px;
+	gap: 20px;
+}
+
+.song--actions a {
+	padding: 10px 30px;
+	border-radius: 100px;
+	font-size: 1.2rem;
+	color: var(--just-white);
+	background-color: var(--red-principal);
+	text-decoration: none;
+	border: none;
+	transition: 0.5s;
+}
+
+.song--actions a:hover {
+	background-color: transparent;
+	border: 1px solid var(--red-principal);
+	transform: translateY(-5px);
+}
+
+.song--actions i {
+	color: var(--just-white);
+	cursor: pointer;
+}
+

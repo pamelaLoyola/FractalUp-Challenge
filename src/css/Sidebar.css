@@ -1,6 +1,7 @@
 .menu{
     display: flex;
     flex-direction: column;
+    min-width: 200px;
     padding: 40px 40px;
 }
 
@@ -29,17 +30,20 @@ section > ul li{
 }
 
 section > ul a {
+    display: block;
     text-align: left;
     font-size: 1.6rem;
     font-weight: 400;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
     color: var(--just-white);
     text-decoration: none;
+    transition: 0.4s;
 }
 
 section > ul a:hover{
-    color: var(--just-white);
+    padding:3px 5px;
     font-weight: bold;
-    background-color: var(--light-red);
+    color: var(--red-principal);
     border-radius: 2px;
+    transform: translateX(5px);
 }
