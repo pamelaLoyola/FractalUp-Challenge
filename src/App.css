@@ -29,7 +29,7 @@
   background-color: var(--dark-red-secondary);
 }
 
-main{
+.main{
   grid-area: main;
   background-color: var(--just-white);
 }

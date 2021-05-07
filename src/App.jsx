@@ -1,6 +1,7 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
 import SearchBox from './components/SearchBox';
+import Main from './components/Main';
 import Player from './components/Player';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <div className="container">
         <SearchBox></SearchBox>
         <Sidebar></Sidebar>
-        <main id="main"></main>
+        <Main></Main>
         <Player></Player>
       </div>
     </div>
