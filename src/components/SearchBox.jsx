@@ -1,44 +1,22 @@
 import React from "react";
 import axios from "axios";
+// Context
+import SongContext from "../context/Songs/SongContext";
 import "../css/Search.css";
 
 const SearchBox = () => {
-	const baseUrl = process.env.REACT_APP_API_URL;
+	const songContext = React.useContext(SongContext);
 
 	// Response Data Model
-	const [songs, setSongs] = React.useState([]);
 	const [songName, setSongName] = React.useState("");
 
 	// React.useEffect(() => {
-	// 	const getSongs = async () => {
-	// 		try {
-	// 			const res = await axios.get(`${baseUrl}/album/302127`);
+	// 	songContext.searchByName('karol g');
+	// });
 
-	// 			console.log(res.data);
-	// 		} catch (error) {
-	// 			console.log(error);
-	// 		}
-	// 	};
-
-	// 	getSongs();
-	// },[]);
-
-	const filterByName = async (e) => {
+	const onKeyPress = (e) => {
 		if (e.key === "Enter") {
-			try {
-				const res = await axios.get(`${baseUrl}/search`, {
-					params: {
-						q: `${songName}`,
-					},
-				});
-
-				console.log(res.data.data)
-				if (res.data) {
-					setSongs(res.data.data);
-				}
-			} catch (error) {
-				console.log(error);
-			}
+			songContext.searchByName(songName);
 		}
 	};
 
@@ -49,7 +27,7 @@ const SearchBox = () => {
 					type="text"
 					placeholder="Buscar"
 					onChange={(e) => setSongName(e.target.value)}
-					onKeyPress={filterByName}
+					onKeyPress={onKeyPress}
 				/>
 				<i className="fas fa-search"></i>
 			</div>
