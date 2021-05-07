@@ -5,13 +5,14 @@
 }
 
 .container{
+  position: relative;
   display: grid;
   grid-template-columns: 0.6fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 2fr 0.3fr;
   grid-template-areas: 
     "menu search search search"
     "menu main main main"
-    "footer footer footer footer"
+    "player player player player"
   ;
   min-width: 100vw;
   height: 100vh;
@@ -33,7 +34,7 @@ main{
   background-color: var(--just-white);
 }
 
-footer{
-  grid-area: footer;
+.player{
+  grid-area: player;
   background-color: var(--red-secondary);
 }

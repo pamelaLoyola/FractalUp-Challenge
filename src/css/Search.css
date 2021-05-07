@@ -17,7 +17,7 @@
     height: 30px;
     padding: 0 40px 0 20px;
     font-size: 1.4rem;
-    border: 1px solid var(--gray);
+    border: 1px solid var(--soft-gray);
     border-radius: 100px;
     outline: none;
 }

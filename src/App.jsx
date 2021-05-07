@@ -1,6 +1,7 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
-import SearchBox from './components/SearchBox'
+import SearchBox from './components/SearchBox';
+import Player from './components/Player';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <SearchBox></SearchBox>
         <Sidebar></Sidebar>
         <main id="main"></main>
-        <footer></footer>
+        <Player></Player>
       </div>
     </div>
   );
