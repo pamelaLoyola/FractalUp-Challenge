@@ -1,7 +1,7 @@
 .App{
   position: relative;
   height: 100vh;
-  background-color: var(--background-main);
+  background-color: var(--just-white);
 }
 
 .container{
@@ -20,7 +20,7 @@
 
 .search{
   grid-area: search;
-  background-color: var(--background-main);
+  background-color: var(--just-white);
 }
 
 .menu{
@@ -30,7 +30,7 @@
 
 main{
   grid-area: main;
-  background-color: var(--background-main);
+  background-color: var(--just-white);
 }
 
 footer{
