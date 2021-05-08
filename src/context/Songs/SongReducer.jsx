@@ -1,4 +1,4 @@
-import { GET_SONGS, SEARCH_SONGS } from "../types";
+import { GET_SONGS, SEARCH_SONGS, TOGGLE_PLAYING, SET_CURRENT_SONG } from "../types";
 
 export default (state, action) => {
 	const { payload, type } = action;
@@ -14,7 +14,17 @@ export default (state, action) => {
 				...state,
 				resultSongs: payload,
 			};
-
+		case TOGGLE_PLAYING:
+			return{
+				...state,
+				playing: payload,
+			}
+		case SET_CURRENT_SONG:
+			return{
+				...state,
+				currentSong: payload,
+				playing:true,
+			}
 		default:
 			return state;
 	}

@@ -1,18 +1,27 @@
 import React from "react";
+import SongContext from "../context/Songs/SongContext";
 import "../css/CurrentSongCard.css";
 
 const CurrentSongCard = (props) => {
+	const { togglePlaying } = React.useContext(SongContext);
+
 	const coverStyle = {
 		backgroundImage: `linear-gradient(10deg, rgba(216, 75, 75, 0.7), rgba(50, 0, 0, 0.7)), 
 		url(${props.songPicture})`,
 	};
+
 	return (
 		<div className="current-song">
 			<div
 				className="song--photo"
 				style={{ backgroundImage: `url(${props.artistPicture})` }}
 			>
-				<i className="fas fa-play"></i>
+				<i
+					className="fas fa-play"
+					onClick={() => {
+						togglePlaying();
+					}}
+				></i>
 			</div>
 			<div className="song--info" style={coverStyle}>
 				<p>{props.artistName}</p>
@@ -20,10 +29,9 @@ const CurrentSongCard = (props) => {
 					Lo mejor de {props.artistName} <span>1000 seguidores</span>
 				</p>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Illum quos ratione sunt laudantium, odio amet placeat!
-					Aliquam, voluptate dignissimos nisi repellat inventore
-					sapiente distinctio beatae cumque dolorum quis ab quibusdam!
+					Adele Laurie Blue Adkins (Tottenham, Londres, Inglaterra, 5
+					de mayo de 1988), conocida simplemente como Adele, es una
+					cantante, compositora y multinstrumentista británica.
 				</p>
 
 				<div className="song--actions">

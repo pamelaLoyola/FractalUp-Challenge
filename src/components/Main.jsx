@@ -9,24 +9,37 @@ import "../css/Main.css";
 
 const Main = () => {
 	const songContext = React.useContext(SongContext);
-	const [currentSong, setCurrentSong] = React.useState("");
+	const [currentSong, setCurrentSong] = React.useState('');
 
 	React.useEffect(() => {
-		setCurrentSong(songContext.resultSongs[0]);
-		console.log(currentSong);
-	});
+		setCurrentSong(songContext.resultSongs[0])
+	})
 
 	return (
 		<div className="main">
+			{
+				currentSong && (
+					<CurrentSongCard
+						songId = {currentSong.id}
+						artistName={currentSong.artist.name}
+						artistPicture={currentSong.artist.picture_big}
+						songPicture={currentSong.album.cover_xl}
+					></CurrentSongCard>
+				)
+			}
 
-
-			{currentSong && (
+			{/* {songContext.resultSongs.length ? (
 				<CurrentSongCard
-					artistName={currentSong.artist.name}
-					artistPicture={currentSong.artist.picture_big}
-					songPicture={currentSong.album.cover_xl}
+					songId = {songContext.resultSongs[0].id}
+					artistName={songContext.resultSongs[0].artist.name}
+					artistPicture={
+						songContext.resultSongs[0].artist.picture_big
+					}
+					songPicture={songContext.resultSongs[0].album.cover_xl}
 				></CurrentSongCard>
-			)}
+			) : null
+			
+			} */}
 
 			<div className="search-results">
 				<p>Resultados</p>
